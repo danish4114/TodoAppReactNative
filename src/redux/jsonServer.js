@@ -16,7 +16,6 @@ class JsonServer extends Component {
   constructor(props) {
     super(props);
   }
-
  componentWillMount() {
     console.log("DDDDDDDDDDDDDDDDDDDD");
     const baseUrl = 'http://jsonplaceholder.typicode.com/todos';
