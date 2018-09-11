@@ -33,8 +33,12 @@ class AddTodo extends Component {
     this.props.newValue(e);
   };
   onPress = () => {
-    this.props.addtodo();
-    this.props.navigation.navigate("Todo");
+    if (this.props.newValu == "") {
+      alert("It can't be empty");
+    } else {
+      this.props.addtodo();
+      this.props.navigation.navigate("Todo");
+    }
   };
   toHome = () => {
     this.props.navigation.navigate("HomePage");
