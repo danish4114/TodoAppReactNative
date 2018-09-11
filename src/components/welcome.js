@@ -11,6 +11,10 @@ import {
 import { Header } from "native-base";
 
 class Welcome extends Component {
+  static navigationOptions = {
+    header: null,
+    headerBackTitle: null
+  };
   componentWillMount() {
     setTimeout(() => {
       this.props.navigation.navigate("HomePage");
@@ -18,20 +22,30 @@ class Welcome extends Component {
   }
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          textAlign: "center",
-          flexDirection: "row",
-          alignItems: "center"
-        }}
-      >
+      <View style={styles.view}>
         <View>
-          <Text style={{ fontSize: 40, fontWeight: "bold" }}>WELCOME</Text>
+          <Text style={styles.text}>WELCOME!</Text>
         </View>
       </View>
     );
   }
 }
 export default Welcome;
+const styles = StyleSheet.create({
+  view: {
+    margin: 10,
+    borderRadius: 30,
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "blue",
+    justifyContent: "center",
+    textAlign: "center",
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  text: {
+    fontSize: 40,
+    fontWeight: "bold",
+    fontFamily:'Arial'
+  }
+});

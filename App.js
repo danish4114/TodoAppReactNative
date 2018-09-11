@@ -19,10 +19,10 @@ import JsonServer from "./src/redux/jsonServer";
 
 const AppNav = createStackNavigator({
   Welcome: { screen: Welcome },
-  JsonServer: { screen: JsonServer },
-  Todo: { screen: Todo },
   HomePage: { screen: HomePage },
-  AddTodo: { screen: AddTodo }
+  Todo: { screen: Todo },
+  AddTodo: { screen: AddTodo },
+  JsonServer: { screen: JsonServer },
 });
 class App extends Component {
   static navigationOptions = {

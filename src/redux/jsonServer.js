@@ -17,13 +17,10 @@ class JsonServer extends Component {
     super(props);
   }
  componentWillMount() {
-    console.log("DDDDDDDDDDDDDDDDDDDD");
     const baseUrl = 'http://jsonplaceholder.typicode.com/todos';
-    console.log(baseUrl);
-    
    axios.get(baseUrl)
       .then(response => {
-        console.log(response,'asdasd');
+        console.log(response,'asdasd'); 
       })
       .catch(error => {
         console.log(error,'error');
