@@ -53,7 +53,9 @@ const foredit = (state, action) => {
 };
 const forDelete = (state, action) => {
   console.log(action);
-  return update(state, {data:{todolist:{$splice:[[action.payload,1]]}}});
+  return update(state, {
+    data: { todolist: { $splice: [[action.payload, 1]] } }
+  });
 };
 
 export default handleActions(

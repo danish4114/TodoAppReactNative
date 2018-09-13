@@ -18,7 +18,7 @@ class Welcome extends Component {
   componentWillMount() {
     setTimeout(() => {
       this.props.navigation.navigate("HomePage");
-    }, 3000);
+    }, 2000);
   }
   render() {
     return (
