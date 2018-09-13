@@ -6,7 +6,8 @@ import {
   Text,
   TextInput,
   // Button,
-  TouchableNativeFeedback
+  TouchableNativeFeedback,
+  Alert
 } from "react-native";
 import { Header } from "native-base";
 import { Button } from "react-native-elements";
@@ -19,19 +20,50 @@ class HomePage extends Component {
   };
   constructor(props) {
     super(props);
-    this.state = { name: "", password: "" };
+    this.state = { name: "", password: "", alertResponse: "" };
   }
   onPress = () => {
-    if (this.state.name == "" && this.state.password == "") {
-      alert("Please Fill Required Credentials");
-    } else if (this.state.password !== "" && this.state.name == "") {
-      alert("Please Enter Your Name");
-    } else if (this.state.name !== "" && this.state.password == "") {
-      alert("Please Enter Your Password");
-    } else {
+    if (
+      this.state.alertResponse == "Ask me later pressed" ||
+      this.state.alertResponse == "Cancel Pressed"
+    ) {
       this.props.navigation.navigate("Todo");
-      this.setState({ name: "", password: "" });
+    } else {
+      if (this.state.name == "" && this.state.password == "") {
+        alert("Please Fill Required Credentials");
+      } else if (this.state.password !== "" && this.state.name == "") {
+        alert("Please Enter Your Name");
+      } else if (this.state.name !== "" && this.state.password == "") {
+        alert("Please Enter Your Password");
+      } else {
+        this.props.navigation.navigate("Todo");
+        this.setState({ name: "", password: "" });
+      }
     }
+  };
+  alert = () => {
+    Alert.alert(
+      "Alert Title",
+      "Please accept any one condition",
+      [
+        {
+          text: "Ask me later",
+          onPress: () =>
+            this.setState({ alertResponse: "Ask me later pressed" }),
+            style:"later"
+        },
+        {
+          text: "Cancel",
+          onPress: () => this.setState({ alertResponse: "Cancel Pressed" }),
+          style: "cancel"
+        },
+        {
+          text: "OK",
+          onPress: () => this.setState({ alertResponse: "OK Pressed" })
+        }
+      ],
+      { cancelable: false }
+    );
   };
   render() {
     return (
@@ -39,6 +71,7 @@ class HomePage extends Component {
         <Header>
           <View style={{ flex: 1, justifyContent: "space-between" }}>
             <Icon
+              onPress={() => this.alert()}
               style={styles.homeIcon}
               name="home"
               size={40}
