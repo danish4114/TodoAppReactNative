@@ -9,18 +9,17 @@ import {
   TouchableNativeFeedback
 } from "react-native";
 import { Header, Icon } from "native-base";
-// import Icon from "react-native-vector-icons/FontAwesome";
 import { createStackNavigator } from "react-navigation";
 import Welcome from "./src/components/welcome";
 import Todo from "./src/components/todo";
 import HomePage from "./src/components/homepage";
 import AddTodo from "./src/components/addtodo";
 import JsonServer from "./src/redux/jsonServer";
+import PageStarter from './src/components/spinner'
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
-// import Icon from "react-native-vector-icons/Entypo";
-// import  Icon from 'react-native-vector-icons/FontAwesome5';
 
 const AppNav = createMaterialBottomTabNavigator({
+  // PageStarter:{screen:PageStarter},
   Welcome: {
     screen: Welcome,
     navigationOptions: {

@@ -148,6 +148,9 @@ signingConfigs {
 }
 
 dependencies {
+    compile project(':react-native-dimmer')
+    compile project(':react-native-system-setting')
+    compile project(':react-native-device-brightness')
     compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
