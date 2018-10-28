@@ -1,4 +1,10 @@
 rootProject.name = 'TodoApp'
+include ':react-native-dimmer'
+project(':react-native-dimmer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dimmer/android')
+include ':react-native-system-setting'
+project(':react-native-system-setting').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-system-setting/android')
+include ':react-native-device-brightness'
+project(':react-native-device-brightness').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-device-brightness/android')
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 

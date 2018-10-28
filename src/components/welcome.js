@@ -6,7 +6,8 @@ import {
   Text,
   TextInput,
   Button,
-  TouchableNativeFeedback
+  TouchableNativeFeedback,
+  ActivityIndicator
 } from "react-native";
 import { Header } from "native-base";
 
@@ -15,16 +16,22 @@ class Welcome extends Component {
     header: null,
     headerBackTitle: null
   };
+  constructor(props){
+    super(props);
+    this.state={animating:true}
+  }
   componentWillMount() {
     setTimeout(() => {
-      this.props.navigation.navigate("HomePage");
-    }, 3000);
+      this.setState({animating:false})
+      
+    }, 4000);
   }
   render() {
     return (
       <View style={styles.view}>
         <View>
           <Text style={styles.text}>WELCOME!</Text>
+          <ActivityIndicator animating={this.state.animating} size='large' color='red'/>
         </View>
       </View>
     );

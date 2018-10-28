@@ -66,6 +66,8 @@
 		07E3D864875E4B38B03BDEE9 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48AF682C0AD24725B3DB6A98 /* rubicon-icon-font.ttf */; };
 		DFC05762AA9D4CFFAE180A96 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2955D62190B84ABB87800A8E /* SimpleLineIcons.ttf */; };
 		3EA7FB9DC25343308F227E19 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7976D39F584A4861BC41DFA6 /* Zocial.ttf */; };
+		7E1D2F3CE24A4929ACA08037 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E23D3E6C46454375967E5CB2 /* libRNDeviceBrightness.a */; };
+		EF0781586F3D43CB8ED2E9BE /* libRCTSystemSetting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16252780989948A395B1A735 /* libRCTSystemSetting.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -401,6 +403,10 @@
 		48AF682C0AD24725B3DB6A98 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		2955D62190B84ABB87800A8E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7976D39F584A4861BC41DFA6 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0A6C7CD0762434EBBA7E1A8 /* RNDeviceBrightness.xcodeproj */ = {isa = PBXFileReference; name = "RNDeviceBrightness.xcodeproj"; path = "../node_modules/react-native-device-brightness/RNDeviceBrightness.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		E23D3E6C46454375967E5CB2 /* libRNDeviceBrightness.a */ = {isa = PBXFileReference; name = "libRNDeviceBrightness.a"; path = "libRNDeviceBrightness.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4CC0D833EE644B728EFA70E9 /* RCTSystemSetting.xcodeproj */ = {isa = PBXFileReference; name = "RCTSystemSetting.xcodeproj"; path = "../node_modules/react-native-system-setting/ios/RCTSystemSetting.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		16252780989948A395B1A735 /* libRCTSystemSetting.a */ = {isa = PBXFileReference; name = "libRCTSystemSetting.a"; path = "libRCTSystemSetting.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +436,8 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				62CEB08E493A42D3B954C79A /* libRNVectorIcons.a in Frameworks */,
+				7E1D2F3CE24A4929ACA08037 /* libRNDeviceBrightness.a in Frameworks */,
+				EF0781586F3D43CB8ED2E9BE /* libRCTSystemSetting.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +625,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				F50C8694DF084B79A9250573 /* RNVectorIcons.xcodeproj */,
+				F0A6C7CD0762434EBBA7E1A8 /* RNDeviceBrightness.xcodeproj */,
+				4CC0D833EE644B728EFA70E9 /* RCTSystemSetting.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1309,10 +1319,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Debug;
@@ -1334,10 +1348,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Release;
@@ -1360,6 +1378,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Debug;
@@ -1381,6 +1401,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Release;
@@ -1411,10 +1433,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Debug;
@@ -1445,10 +1471,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Release;
@@ -1478,10 +1508,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Debug;
@@ -1511,10 +1545,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
+					"$(SRCROOT)/../node_modules/react-native-system-setting/ios",
 				);
 			};
 			name = Release;

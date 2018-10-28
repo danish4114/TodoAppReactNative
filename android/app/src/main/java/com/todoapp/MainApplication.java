@@ -3,6 +3,9 @@ package com.todoapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import social.yadi.rndimmer.ReactNativeDimmerPackage;
+import com.ninty.system.setting.SystemSettingPackage;
+import org.capslock.RNDeviceBrightness.RNDeviceBrightness;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -24,6 +27,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeDimmerPackage(),
+            new SystemSettingPackage(),
+            new RNDeviceBrightness(),
             new VectorIconsPackage()
       );
     }
